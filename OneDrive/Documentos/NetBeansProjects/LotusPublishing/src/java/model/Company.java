@@ -10,50 +10,69 @@ package model;
  */
 public class Company {
 
-    int companyID;
-    String companyName;
-    String contactInfo;
-    String type;
-    
-    
-    public Company(int companyID, String companyName, String contactInfo, String type){
-        this.companyID = companyID;
+    private int companyId;
+    private String companyName;
+    private String contactInfo;
+    private String type; // e.g., 'supplier', 'client', etc.
+
+    // --- Constructors ---
+    public Company() {
+    }
+
+    public Company(int companyId, String companyName, String contactInfo, String type) {
+        this.companyId = companyId;
         this.companyName = companyName;
         this.contactInfo = contactInfo;
         this.type = type;
     }
-    
-    ////////////////Setters and Getters///////////////////
-      //companyID
-     public int companyID() {
-        return companyID;
+
+    // Overloaded constructor (without ID for inserts)
+    public Company(String companyName, String contactInfo, String type) {
+        this.companyName = companyName;
+        this.contactInfo = contactInfo;
+        this.type = type;
     }
 
-    public void companyID(int companyID) {
-        this.companyID = companyID;
+    // --- Getters and Setters ---
+    public int getCompanyId() {
+        return companyId;
     }
-      //companyID
-     public String companyName() {
+
+    public void setCompanyId(int companyId) {
+        this.companyId = companyId;
+    }
+
+    public String getCompanyName() {
         return companyName;
     }
 
-    public void companyName(String companyName) {
+    public void setCompanyName(String companyName) {
         this.companyName = companyName;
     }
-       //companyID
-     public String contactInfo() {
+
+    public String getContactInfo() {
         return contactInfo;
     }
 
-    public void contactInfo(String contactInfo) {
+    public void setContactInfo(String contactInfo) {
         this.contactInfo = contactInfo;
     }
-       //companyID
-     public String type() {
+
+    public String getType() {
         return type;
     }
 
-    public void type(String type) {
+    public void setType(String type) {
         this.type = type;
+    }
+
+    @Override
+    public String toString() {
+        return "Company{"
+                + "companyId=" + companyId
+                + ", companyName='" + companyName + '\''
+                + ", contactInfo='" + contactInfo + '\''
+                + ", type='" + type + '\''
+                + '}';
     }
 }

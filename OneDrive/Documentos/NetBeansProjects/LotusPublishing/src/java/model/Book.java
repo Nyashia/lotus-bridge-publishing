@@ -8,7 +8,7 @@ package model;
  *
  * @author Nyash
  */
-import java.util.Date;
+import java.sql.Date;
 
 public class Book {
 
@@ -19,6 +19,7 @@ public class Book {
     private double price;
     private String isbn;
 
+    // --- Constructors ---
     public Book() {
     }
 
@@ -31,7 +32,16 @@ public class Book {
         this.isbn = isbn;
     }
 
-    // Getters and Setters
+    // Overloaded constructor (without ID for inserts)
+    public Book(String title, int authorId, Date publicationDate, double price, String isbn) {
+        this.title = title;
+        this.authorId = authorId;
+        this.publicationDate = publicationDate;
+        this.price = price;
+        this.isbn = isbn;
+    }
+
+    // --- Getters and Setters ---
     public int getBookId() {
         return bookId;
     }
@@ -78,5 +88,17 @@ public class Book {
 
     public void setIsbn(String isbn) {
         this.isbn = isbn;
+    }
+
+    @Override
+    public String toString() {
+        return "Book{"
+                + "bookId=" + bookId
+                + ", title='" + title + '\''
+                + ", authorId=" + authorId
+                + ", publicationDate=" + publicationDate
+                + ", price=" + price
+                + ", isbn='" + isbn + '\''
+                + '}';
     }
 }

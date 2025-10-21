@@ -9,79 +9,74 @@ package model;
  * @author Nyash
  */
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Employee {
+    private int employeeId;
+    private String firstName;
+    private String lastName;
+    private String position;
+    private String email;
+    private double salary;
+    private Date hireDate;
 
-    String firstName;
-    String lastName;
-    String position;
-    String email;
-    double salary;
-    Date date;
+    // --- Constructors ---
+    public Employee() {}
 
-    public Employee(String firstName, String lastName, String position, String emial, double salary, Date date) {
+    public Employee(int employeeId, String firstName, String lastName,
+                    String position, String email, double salary, Date hireDate) {
+        this.employeeId = employeeId;
         this.firstName = firstName;
         this.lastName = lastName;
         this.position = position;
         this.email = email;
         this.salary = salary;
-        this.date = date;
+        this.hireDate = hireDate;
     }
 
-    ////////////////Setters and Getters///////////////////
-     //firstName
-     public String getfirstName() {
-        return firstName;
-    }
-
-    public void setfirstName(String firstName) {
+    // Overloaded constructor (without ID)
+    public Employee(String firstName, String lastName,
+                    String position, String email, double salary, Date hireDate) {
         this.firstName = firstName;
-    }
-
-    //lastName
-    public String getlastName() {
-        return lastName;
-    }
-
-    public void setlastName(String lastName) {
         this.lastName = lastName;
-    }
-    //position
-
-    public String getPosition() {
-        return position;
-    }
-
-    public void setPosition(String position) {
         this.position = position;
-    }
-    //Email
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
         this.email = email;
-    }
-    //Salary
-
-    public double getSalary() {
-        return salary;
-    }
-
-    public void setSalary(double salary) {
         this.salary = salary;
-    }
-    //Date
-
-    public Date date() {
-        return date;
+        this.hireDate = hireDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }
+    // --- Getters and Setters ---
+    public int getEmployeeId() { return employeeId; }
+    public void setEmployeeId(int employeeId) { this.employeeId = employeeId; }
 
+    public String getFirstName() { return firstName; }
+    public void setFirstName(String firstName) { this.firstName = firstName; }
+
+    public String getLastName() { return lastName; }
+    public void setLastName(String lastName) { this.lastName = lastName; }
+
+    public String getPosition() { return position; }
+    public void setPosition(String position) { this.position = position; }
+
+    public String getEmail() { return email; }
+    public void setEmail(String email) { this.email = email; }
+
+    public double getSalary() { return salary; }
+    public void setSalary(double salary) { this.salary = salary; }
+
+    public Date getHireDate() { return hireDate; }
+    public void setHireDate(Date hireDate) { this.hireDate = hireDate; }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "employeeId=" + employeeId +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", position='" + position + '\'' +
+                ", email='" + email + '\'' +
+                ", salary=" + salary +
+                ", hireDate=" + hireDate +
+                '}';
+    }
 }

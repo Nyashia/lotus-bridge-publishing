@@ -1,6 +1,6 @@
 <%-- 
-    Document   : indexx
-    Created on : Sep 26, 2025, 4:47:26 AM
+    Document   : dashboard
+    Created on : Sep 28, 2025, 4:45:18 AM
     Author     : Nyash
 --%>
 
@@ -9,7 +9,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title> J S P Page</title>
+        <title>J SP Page</title>
+        
+        <link rel="stylesheet" href="style.cc"/>
     </head>
     <body>
         <h1>Hello World!</h1>

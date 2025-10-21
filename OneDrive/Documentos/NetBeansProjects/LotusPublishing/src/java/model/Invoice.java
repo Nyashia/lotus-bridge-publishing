@@ -14,59 +14,24 @@ public class Invoice {
 
     private int invoiceId;
     private int companyId;
-    private Date invoiceDate;
-    private double amount;
-    private String status; // Paid, Unpaid, Overdue
+    private Date dateCreated;
+    private Date dateDue;
+    private double totalAmount;
+    private String status; // Paid, Unpaid
+    private String notes;
 
-    public Invoice() {
-    }
+    
 
-    public Invoice(int invoiceId, int companyId, Date invoiceDate, double amount, String status) {
+    public Invoice(int invoiceId, int companyId, Date dateCreated, Date dateDue, 
+            double totalAmount, String status, String notes) {
         this.invoiceId = invoiceId;
         this.companyId = companyId;
-        this.invoiceDate = invoiceDate;
-        this.amount = amount;
+        this.dateCreated = dateCreated;
+        this.dateDue = dateDue;
+        this.totalAmount = totalAmount;
         this.status = status;
+        this.notes = notes;
     }
 
-    // Getters and Setters
-    public int getInvoiceId() {
-        return invoiceId;
-    }
-
-    public void setInvoiceId(int invoiceId) {
-        this.invoiceId = invoiceId;
-    }
-
-    public int getCompanyId() {
-        return companyId;
-    }
-
-    public void setCompanyId(int companyId) {
-        this.companyId = companyId;
-    }
-
-    public Date getInvoiceDate() {
-        return invoiceDate;
-    }
-
-    public void setInvoiceDate(Date invoiceDate) {
-        this.invoiceDate = invoiceDate;
-    }
-
-    public double getAmount() {
-        return amount;
-    }
-
-    public void setAmount(double amount) {
-        this.amount = amount;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
+   
 }

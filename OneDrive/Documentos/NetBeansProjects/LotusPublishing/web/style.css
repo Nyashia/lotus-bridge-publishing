@@ -1,0 +1,23 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : Sep 28, 2025, 2:49:35 AM
+    Author     : Nyash
+*/
+
+:root{
+    --light-grey:#CFD6DC;
+    --Dark-green:#093E3E;
+    --Blue:15A19A;
+    --Yellow: #E3B11B;
+    --Dark-grey:#6C8689;
+    --Red:#BA4644;
+    --Brownish:#D6AA7D;
+    --Light-brown:#AD8078;
+}
+
+*{
+    background-color: var(--light-grey);
+}
